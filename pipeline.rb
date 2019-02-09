@@ -7,8 +7,8 @@ class Pipeline
     Pipeline.new(@pipes + [pipe])
   end
 
-  def call(pipes)
-    @pipes.reduce(pipes) { |pipe, memo| memo.call(pipe) }
+  def call(value)
+    @pipes.reduce(value) { |val, func| func.call(val) }
   end
 end
 
