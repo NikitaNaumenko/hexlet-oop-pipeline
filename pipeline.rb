@@ -31,6 +31,8 @@ class Main
     upcase_string
   end
 
+  private
+
   def check_initial?(string, sym)
     string[0].eql?(sym)
   end
